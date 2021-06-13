@@ -63,16 +63,23 @@ Testing takes place in the automated Jenkins environment
 Ansible configures the docker and nginx functionalities
 Jenkins deploys the app
 
+![SERVICES](https://i.imgur.com/iJdegYr.png)
+
+Process
+* A user clicks on the adventure button
+* Service 1 initiates a get request from service 2 and 3 bringing back a random location and a random encounter
+* Service 1 initiates a post request with this information returning a random outcome based on the encounter
+* Service 4 passes this information back to service 1
+* Service 1 posts this to an external SQL database instance
+* Service 1 displays the adventure on the page alongside the last 5 adventures
 
 ## Architecture
 
 ### Database Relationship Diagram
 
-![ERD](https://i.imgur.com/URk9NDA.png)
+![ERD](https://i.imgur.com/AS00oZ6.png)
 
-Displayed above is my Entity Relationship Diagram and the intial scope of my project. As indicated by the key, the red boxes are features which were not yet implemented and the green features are features which are complete and functioning. 
-
-The relationship between the Players and Items tables are a "One to Many" relationship as one Player may hold multiple Items. This satisfies the relational aspect of the project.
+Displayed above is my Entity Relationship Diagram showing the table that is used by the app. It's very simple 
 
 ### CI Pipeline
 
@@ -111,12 +118,17 @@ The following matrix shows my risk assessments. The first three risks I forsaw d
 
 ## Testing
 
-Testing was carried out in 2 main ways via selenium which was integration testing, and pytest which was unit testing. My selenium testing is still very basic only really covered the most basic app functions which satisfied the CRUD functionality expected by the project brief. My unit testing was more developed, with a total coverage of 90%. There were a few stray lines here and there that I didn't know how to test and there were two sections in my routes.py file which I tried to create a test for but wasn't successful. That's a point for continual development.
+Testing was carried out in an automated fashion through Jenkins. Pytest was used to unit test. My unit testing is highly developed, with a total coverage of 100%. This shows marked improvement on my previous project testing. I do believe that I could have implemented more stenuous and complicated tests to ensure every possible function had been tested thoroughly.
+
+![TESTS](https://i.imgur.com/6OvPw6T.png)
 
 ## Application
 
-My application is fully functional and has no bugs (that I've yet found). The following is a breakdown of how it works:
+My application is fully functional and has no bugs (that I've yet found). As you can see the app is fairly simple in its application.
 
+![APP](https://i.imgur.com/JMlfKPv.png)
+
+A user presses the button, and a encounter, location, and outcome are displayed - then stored below.
 
 ## Future Development
 
@@ -132,7 +144,7 @@ Me, Amir.
 
 Nick, Ben, and Raji for providing me with the relevant skills needed to be able to code the app.
 
-Special thanks to Harry who was an absolute gem and really made it possible with filling in gaps in our knowledge. 
+Special thanks to Harry who was an absolute gem during the entire process and really made it possible with filling in gaps in our knowledge and troubleshooting every single issue. My saviour.
 
 ## Licensing 
 
