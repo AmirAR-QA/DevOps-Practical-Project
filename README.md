@@ -1,6 +1,3 @@
-
-
-
 # DevOps-Practical-Project
 
 ## Contents
@@ -65,4 +62,3 @@ Nginx acts as a reverse proxy load balancer so no one node gets overloaded
 Testing takes place in the automated Jenkins environment
 Ansible configures the docker and nginx functionalities
 Jenkins deploys the app
->>>>>>> 19bf0dbc057bba3aae39c5f79f57a8d79578143a
