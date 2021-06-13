@@ -89,7 +89,7 @@ The pipeline displayed above was my working stream.
 * Worked out what to work on first and tracked all streams of work with my Trello board
 * I started by developing the code of the app using Python and flask
 * Pushed the code to this GitHub repository
-* Cloned the repository into my GCP instance
+* Cloned the repository into my GCP instance on 4 seperate VM's
 * Pulled the code, built and ran the app via Jenkins
 * Tested the code with Pytest (unit testing) and Selenium (integration testing)
 * I accordingly adjusted my code till it passed my assertions and pushed to my GitHu
@@ -100,21 +100,21 @@ I had intended to run the testing via jenkins itself but the skills required are
 
 ## Project Management
 
-The Trello board I used to track and manage tasks while developing the app can be found here (https://trello.com/b/Co65bKUV/qa-project-1). 
+The Trello board I used to track and manage tasks while developing the app which can be found here https://trello.com/b/Co65bKUV/qa-project-2
 
 I archived lists as I went and moved cards from left to right, going from it's conception as a User Story to the Design, and Testing lists (now archived) and then to the Doing and Completed lists (still visible) 
 
-![TB](https://i.imgur.com/Qq0qtZ4.png)
+![TB](https://i.imgur.com/QTx3m2Y.png)
 
 The User Stories that have been entered come with Acceptance Criteria in the comments, like so;
 
-![US](https://i.imgur.com/NvCXOFm.png)
+![US](https://i.imgur.com/tGSAc3Z.png)
 
 ## Risk Assessment
 
-![RA](https://i.imgur.com/uH8FiIy.png)
+![RA](https://i.imgur.com/HkCf69L.png)
 
-The following matrix shows my risk assessments. The first three risks I forsaw during my intial planning stage. Later on I realised, I had included in older commits my Secret Key to the database. Perhaps other secure pieces of information were available in older commits. I added risk 4 after this. Similarly, I added risk 5 when I had an outage during development and realised that GCP may be prone to outages too. 
+The following matrix shows my risk assessments. The first three risks I forsaw during my intial planning stage. Later on I realised, that in my rush to finish the app my passwords weren't as secure as they should have been. Similarly, I added risk 5 when I had an outage during development and realised that GCP may be prone to outages too. 
 
 ## Testing
 
