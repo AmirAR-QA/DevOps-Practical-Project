@@ -79,24 +79,27 @@ Process
 
 ![ERD](https://i.imgur.com/AS00oZ6.png)
 
-Displayed above is my Entity Relationship Diagram showing the table that is used by the app. It's very simple 
+Displayed above is my Entity Relationship Diagram showing the table that is used by the app. It's a very simple database and didn't need much coding on the app front, the complicated bit of this tutorial was creating the CI/CD pipeline.
 
 ### CI Pipeline
 
-![CI](https://i.imgur.com/PcgtRtR.png)
+The following image shows the complete CI pipeline working alongside each other to create, test, update, and deploy the app in multiple containers with relics. 
 
-The pipeline displayed above was my working stream. 
-* Worked out what to work on first and tracked all streams of work with my Trello board
-* I started by developing the code of the app using Python and flask
-* Pushed the code to this GitHub repository
-* Cloned the repository into my GCP instance on 4 seperate VM's
-* Pulled the code, built and ran the app via Jenkins
-* Tested the code with Pytest (unit testing) and Selenium (integration testing)
-* I accordingly adjusted my code till it passed my assertions and pushed to my GitHu
-* b to be rebuilt by Jenkins
-* I then used Jenkins to build the final app for presentation
+![CI](https://i.imgur.com/ehaAB08.png)
 
-I had intended to run the testing via jenkins itself but the skills required are, as of yet, not in my grasp. 
+The 7 stages displayed in this image are as follows:
+
+* Declarative checkout SCM: The source code management side of the app in which Jenkins fetches the most up to date form of the app and begins to build it.
+* Setup: This is where all the necessary softwares and packages are downloaded and implemented so that the app can function
+* Test: This is where the app is tested with our written unit tests and coverage reports are produced
+* Build: This builds the services into docker containers and images
+* Push: This stage pushes the docker images into dockerhub so it can be accessed publically 
+* Ansible: This process begins the creation of the docker swarm and creates roles for all the components of the app.
+* Deploy: This stage completes the docker swarm configuration and adds the nginx configuration meaning that we now have a fully functioning app, live, deployed in multipe containers with a load balancer and a reverse proxy.
+
+![CI2](https://i.imgur.com/ByI9FYR.png)
+
+The image aboves displays all the parts of the app, how it functions, and what their relationship is with others.
 
 ## Project Management
 
@@ -133,6 +136,10 @@ A user presses the button, and a encounter, location, and outcome are displayed 
 ## Future Development
 
 There are a few points of improvements I'd like to carry out. 
+
+I'd like to streamline the build process so that the creation time is cut down.
+I'd like to implement a more user friendly CSS for the home page.
+I'd like to add a lot more options for more zany random encounters.
 
 A note on versioning - The current app is fully functional and without any major (or percievable minor) bugs. Thus the version number is 0.1.0.
 
