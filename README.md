@@ -63,6 +63,67 @@ Testing takes place in the automated Jenkins environment
 Ansible configures the docker and nginx functionalities
 Jenkins deploys the app
 
+
+## Architecture
+
+### Database Relationship Diagram
+
+![ERD](https://i.imgur.com/URk9NDA.png)
+
+Displayed above is my Entity Relationship Diagram and the intial scope of my project. As indicated by the key, the red boxes are features which were not yet implemented and the green features are features which are complete and functioning. 
+
+The relationship between the Players and Items tables are a "One to Many" relationship as one Player may hold multiple Items. This satisfies the relational aspect of the project.
+
+### CI Pipeline
+
+![CI](https://i.imgur.com/PcgtRtR.png)
+
+The pipeline displayed above was my working stream. 
+* Worked out what to work on first and tracked all streams of work with my Trello board
+* I started by developing the code of the app using Python and flask
+* Pushed the code to this GitHub repository
+* Cloned the repository into my GCP instance
+* Pulled the code, built and ran the app via Jenkins
+* Tested the code with Pytest (unit testing) and Selenium (integration testing)
+* I accordingly adjusted my code till it passed my assertions and pushed to my GitHu
+* b to be rebuilt by Jenkins
+* I then used Jenkins to build the final app for presentation
+
+I had intended to run the testing via jenkins itself but the skills required are, as of yet, not in my grasp. 
+
+## Project Management
+
+The Trello board I used to track and manage tasks while developing the app can be found here (https://trello.com/b/Co65bKUV/qa-project-1). 
+
+I archived lists as I went and moved cards from left to right, going from it's conception as a User Story to the Design, and Testing lists (now archived) and then to the Doing and Completed lists (still visible) 
+
+![TB](https://i.imgur.com/Qq0qtZ4.png)
+
+The User Stories that have been entered come with Acceptance Criteria in the comments, like so;
+
+![US](https://i.imgur.com/NvCXOFm.png)
+
+## Risk Assessment
+
+![RA](https://i.imgur.com/uH8FiIy.png)
+
+The following matrix shows my risk assessments. The first three risks I forsaw during my intial planning stage. Later on I realised, I had included in older commits my Secret Key to the database. Perhaps other secure pieces of information were available in older commits. I added risk 4 after this. Similarly, I added risk 5 when I had an outage during development and realised that GCP may be prone to outages too. 
+
+## Testing
+
+Testing was carried out in 2 main ways via selenium which was integration testing, and pytest which was unit testing. My selenium testing is still very basic only really covered the most basic app functions which satisfied the CRUD functionality expected by the project brief. My unit testing was more developed, with a total coverage of 90%. There were a few stray lines here and there that I didn't know how to test and there were two sections in my routes.py file which I tried to create a test for but wasn't successful. That's a point for continual development.
+
+## Application
+
+My application is fully functional and has no bugs (that I've yet found). The following is a breakdown of how it works:
+
+
+## Future Development
+
+There are a few points of improvements I'd like to carry out. 
+
+A note on versioning - The current app is fully functional and without any major (or percievable minor) bugs. Thus the version number is 0.1.0.
+
 ## Contributors
 
 Me, Amir. 
