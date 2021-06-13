@@ -46,3 +46,19 @@ I have been tasked with creating a web app which is made up for 4 interconnected
 * Nginx - Reverse Proxy
 * Docker (Compose, Swarm) - Containers to deploy to
 * Draw.io - ERD creation
+
+## Layout
+
+To satisfy the requirements of this project I created an app with generates a random encounter, a random location, and an outcome based on the counter In more detail:
+
+Service 1: Front-end of the program, displays all the information by requesting it from the other services.
+Service 2: Generates a random encounter
+Service 3: Generates a random location
+Service 4: Generates an outcome of the random encounter from service 2, then sends the information to service 1 by a POST request
+
+Docker and Docker-Compose used to containerise the images and builds
+Docker Swarm spreads the app across worker nodes and a manager node
+Nginx acts as a reverse proxy load balancer so no one node gets overloaded
+Testing takes place in the automated Jenkins environment
+Ansible configures the docker and nginx functionalities
+Jenkins deploys the app
