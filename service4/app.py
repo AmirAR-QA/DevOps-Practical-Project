@@ -35,6 +35,4 @@ def returnresult():
 
     return Response(encounter_result)
 
-if __name__=="__main__": app.run(port=5003, host='0.0.0.0', debug=True)
-
-# This file is complete
+if __name__=="__main__": app.run(port=5003, host='0.0.0.0', debug=True)  

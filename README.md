@@ -1,1 +1,1 @@
-# DevOps-Practical-Project
+# projectpractice
