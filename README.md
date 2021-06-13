@@ -31,3 +31,18 @@ I have been tasked with creating a web app which is made up for 4 interconnected
 * The project must be deployed using containerisation and an orchestration tool.
 * As part of the project, you need to create an Ansible Playbook that will provision the environment that your application needs to run.
 * The project must make use of a reverse proxy to make your application accessible to the user.
+
+## Created With
+
+* Visual Studio Code - IDE
+* GCP - Database and instance host
+* MySQL - Database language
+* Jenkins - CI pipeline
+* Git - Version control
+* GitHub - Repository and version control
+* Trello - Project management
+* Pytest - Unit testing
+* Ansible - Load balancer
+* Nginx - Reverse Proxy
+* Docker (Compose, Swarm) - Containers to deploy to
+* Draw.io - ERD creation
