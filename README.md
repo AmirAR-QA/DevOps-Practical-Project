@@ -149,7 +149,7 @@ Me, Amir.
 
 ## Acknowledgements
 
-Nick, Ben, and Raji for providing me with the relevant skills needed to be able to code the app.
+Nick, Ben, Oliver, and Raji for providing me with the relevant skills needed to be able to code the app.
 
 Special thanks to Harry who was an absolute gem during the entire process and really made it possible with filling in gaps in our knowledge and troubleshooting every single issue. My saviour.
 
